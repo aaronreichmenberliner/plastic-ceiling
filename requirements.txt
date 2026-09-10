@@ -1,0 +1,8 @@
+matplotlib>=3.8
+numpy>=1.26
+openpyxl>=3.1
+Pillow>=10.0
+cairosvg>=2.7
+plotly>=6.0
+kaleido>=1.0
+fonttools>=4.22

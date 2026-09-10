@@ -1,0 +1,15 @@
+# Build products (regenerate with `python build_all.py`)
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Office lock files
+~$*
+.~lock.*#
+
+# OS
+.DS_Store

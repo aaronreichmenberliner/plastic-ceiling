@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Title: BPSF Pages: 1 --><svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="1052pt" height="797pt" viewBox="4.00 -4.00 1052.50 797.00" version="1.1" id="svg128" sodipodi:docname="BPSF_schematic.svg" inkscape:export-filename="BPSF_schematic.png" inkscape:export-xdpi="300" inkscape:export-ydpi="300">
+  <defs id="defs128">
+    <rect x="839.5" y="274" width="150.5" height="128.5" id="rect138"/>
+    <rect x="-59" y="192" width="60" height="238.5" id="rect129"/>
+  </defs>
+  <sodipodi:namedview id="namedview128" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="pt" inkscape:zoom="2" inkscape:cx="701" inkscape:cy="451.25" inkscape:window-width="3840" inkscape:window-height="2054" inkscape:window-x="-11" inkscape:window-y="-11" inkscape:window-maximized="1" inkscape:current-layer="graph0" showguides="false"/>
+  <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1009)">
+    <title id="title1">BPSF</title>
+    <g id="clust1" class="cluster">
+      <title id="title2">cluster_routing</title>
+      <path fill="#f5f5f5" stroke="#999999" stroke-dasharray="5,2" d="M20,-550C20,-550 300,-550 300,-550 306,-550 312,-556 312,-562 312,-562 312,-932 312,-932 312,-938 306,-944 300,-944 300,-944 20,-944 20,-944 14,-944 8,-938 8,-932 8,-932 8,-562 8,-562 8,-556 14,-550 20,-550" id="path2"/>
+      <text text-anchor="start" x="109.04412" y="-925.09924" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="18px" id="text2">Routing</text>
+    </g>
+    <g id="clust2" class="cluster">
+      <title id="title3">cluster_scenarios</title>
+      <path fill="#f5f5f5" stroke="#999999" stroke-dasharray="5,2" d="M59,-224C59,-224 457,-224 457,-224 463,-224 469,-230 469,-236 469,-236 469,-447 469,-447 469,-453 463,-459 457,-459 457,-459 59,-459 59,-459 53,-459 47,-453 47,-447 47,-447 47,-236 47,-236 47,-230 53,-224 59,-224" id="path3"/>
+      <text text-anchor="start" x="219.99928" y="-438.5986" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="18px" id="text3">Scenarios</text>
+    </g>
+    <!-- Scope -->
+    <g id="node1" class="node">
+      <title id="title4">Scope</title>
+      <path fill="#fff0d9" stroke="#666666" d="M299,-1005C299,-1005 61,-1005 61,-1005 55,-1005 49,-999 49,-993 49,-993 49,-965 49,-965 49,-959 55,-953 61,-953 61,-953 299,-953 299,-953 305,-953 311,-959 311,-965 311,-965 311,-993 311,-993 311,-999 305,-1005 299,-1005" id="path4"/>
+      <text text-anchor="middle" x="180" y="-989.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text4">Description / Scope</text>
+      <text text-anchor="middle" x="180" y="-975.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text5">Assumptions + Boundaries</text>
+      <text text-anchor="middle" x="180" y="-961.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text6">(steady-state; carbon only; 298 K / 1 atm)</text>
+    </g>
+    <!-- Inputs -->
+    <g id="node2" class="node">
+      <title id="title6">Inputs</title>
+      <path fill="#dde2e9" stroke="#666666" d="M582.5,-1005C582.5,-1005 355.5,-1005 355.5,-1005 349.5,-1005 343.5,-999 343.5,-993 343.5,-993 343.5,-965 343.5,-965 343.5,-959 349.5,-953 355.5,-953 355.5,-953 582.5,-953 582.5,-953 588.5,-953 594.5,-959 594.5,-965 594.5,-965 594.5,-993 594.5,-993 594.5,-999 588.5,-1005 582.5,-1005" id="path6"/>
+      <text text-anchor="middle" x="469" y="-989.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text7">Inputs</text>
+      <text text-anchor="middle" x="469" y="-975.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text8">Mission Specs + Carbon Streams</text>
+      <text text-anchor="middle" x="469" y="-961.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text9" xml:space="preserve"><tspan>(basis: kg</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46"> / (person·yr); operating days)</tspan></text>
+      </g>
+    <!-- Scope&#45;&gt;Inputs -->
+    <!-- Coupling -->
+    <g id="node9" class="node">
+      <title id="title11">Coupling</title>
+      <path fill="#e3e3e3" stroke="#666666" d="M292,-908C292,-908 68,-908 68,-908 62,-908 56,-902 56,-896 56,-896 56,-854 56,-854 56,-848 62,-842 68,-842 68,-842 292,-842 292,-842 298,-842 304,-848 304,-854 304,-854 304,-896 304,-896 304,-902 298,-908 292,-908" id="path11"/>
+      <text text-anchor="middle" x="180" y="-892.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text12">Stream Inter-Conversion</text>
+      <text text-anchor="middle" x="180" y="-878.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text13">AD split → VFAs / CH₄ / CO₂</text>
+      <text text-anchor="middle" x="180" y="-864.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text14">Pyrolysis → CH₄ / CO / CO₂</text>
+      <text text-anchor="middle" x="180" y="-850.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text15">CO₂ pool → Sabatier → CH₄ (+ tail CO₂)</text>
+    </g>
+    <!-- Scope&#45;&gt;Coupling -->
+    <g id="edge6" class="edge">
+      <title id="title15">Scope-&gt;Coupling</title>
+      <text text-anchor="middle" x="215.01291" y="-926.45074" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12px" fill="#111111" id="text16">scope/rules</text>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M180,-952.76C180,-952.76 180,-916.34 180,-916.34" id="path15"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="182.8,-916.34 180,-908.34 177.2,-916.34 182.8,-916.34" id="polygon15"/>
+      <text xml:space="preserve" transform="matrix(0.75035649,0,0,0.75035649,0,-1013.1894)" id="text129" style="fill:#000000;text-orientation:auto;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect129)"/>
+    </g>
+    <!-- Constants -->
+    <g id="node3" class="node">
+      <title id="title17">Constants</title>
+      <path fill="#e5eaf1" stroke="#666666" d="M815,-1005C815,-1005 639,-1005 639,-1005 633,-1005 627,-999 627,-993 627,-993 627,-965 627,-965 627,-959 633,-953 639,-953 639,-953 815,-953 815,-953 821,-953 827,-959 827,-965 827,-965 827,-993 827,-993 827,-999 821,-1005 815,-1005" id="path17"/>
+      <text text-anchor="middle" x="727" y="-989.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text18">Constants</text>
+      <text text-anchor="middle" x="727" y="-975.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text19">Physical + Transport Constants</text>
+      <text text-anchor="middle" x="727" y="-961.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text20" xml:space="preserve"><tspan>(H</tspan><tspan font-size="8.8" dy="2.46">cp</tspan><tspan dy="-2.46">, M</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46">, unit conversions)</tspan></text>
+      </g>
+    <!-- Inputs&#45;&gt;Constants -->
+    <!-- MechCap -->
+    <g id="node5" class="node">
+      <title id="title24">MechCap</title>
+      <path fill="#e3e3e3" stroke="#666666" d="M841.5,-603C841.5,-603 622.5,-603 622.5,-603 616.5,-603 610.5,-597 610.5,-591 610.5,-591 610.5,-563 610.5,-563 610.5,-557 616.5,-551 622.5,-551 622.5,-551 841.5,-551 841.5,-551 847.5,-551 853.5,-557 853.5,-563 853.5,-563 853.5,-591 853.5,-591 853.5,-597 847.5,-603 841.5,-603" id="path24"/>
+      <text text-anchor="middle" x="732" y="-587.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text25">Theoretical Model</text>
+      <text text-anchor="middle" x="732" y="-573.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text26" xml:space="preserve"><tspan>C</tspan><tspan font-size="8.8" dy="2.46">cap</tspan><tspan dy="-2.46"> · P</tspan><tspan font-size="8.8" dy="2.46">V</tspan><tspan dy="-2.46"> · Y</tspan><tspan font-size="8.8" dy="2.46">X/C</tspan><tspan dy="-2.46"> · r</tspan><tspan font-size="8.8" dy="2.46">C</tspan></text>
+      <text text-anchor="middle" x="732" y="-559.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text34" xml:space="preserve"><tspan>from k</tspan><tspan font-size="8.8" dy="2.46">L</tspan><tspan dy="-2.46">a / OTR / photon / depol. rates</tspan></text>
+      </g>
+    <!-- Inputs&#45;&gt;MechCap -->
+    <g id="edge7" class="edge">
+      <title id="title36">Inputs-&gt;MechCap</title>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M589,-952.84C589,-864.85 589,-585 589,-585 589,-585 602.41,-585 602.41,-585" id="path36"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="602.41,-587.8 610.41,-585 602.41,-582.2 602.41,-587.8" id="polygon36"/>
+    </g>
+    <!-- PathCap -->
+    <g id="node6" class="node">
+      <title id="title38">PathCap</title>
+      <path fill="#e3e3e3" stroke="#666666" d="M566,-603C566,-603 390,-603 390,-603 384,-603 378,-597 378,-591 378,-591 378,-563 378,-563 378,-557 384,-551 390,-551 390,-551 566,-551 566,-551 572,-551 578,-557 578,-563 578,-563 578,-591 578,-591 578,-597 572,-603 566,-603" id="path38"/>
+      <text text-anchor="middle" x="478" y="-587.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text39">Empirical Model</text>
+      <text text-anchor="middle" x="478" y="-573.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text40" xml:space="preserve"><tspan>C</tspan><tspan font-size="8.8" dy="2.46">cap</tspan><tspan dy="-2.46"> · P</tspan><tspan font-size="8.8" dy="2.46">V</tspan><tspan dy="-2.46"> · Y</tspan><tspan font-size="8.8" dy="2.46">X/C</tspan><tspan dy="-2.46"> · r</tspan><tspan font-size="8.8" dy="2.46">C</tspan></text>
+      <text text-anchor="middle" x="478" y="-559.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text48">from chassis-specific literature</text>
+    </g>
+    <!-- Inputs&#45;&gt;PathCap -->
+    <g id="edge8" class="edge">
+      <title id="title48">Inputs-&gt;PathCap</title>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M478,-952.93C478,-952.93 478,-611.01 478,-611.01" id="path48"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="480.8,-611.01 478,-603.01 475.2,-611.01 480.8,-611.01" id="polygon48"/>
+    </g>
+    <!-- Inputs&#45;&gt;Coupling -->
+    <g id="edge13" class="edge">
+      <title id="title50">Inputs-&gt;Coupling</title>
+      <path fill="none" stroke="#555555" d="M360.75,-952.6C360.75,-925.1 360.75,-886 360.75,-886 360.75,-886 312.06,-886 312.06,-886" id="path50"/>
+      <polygon fill="#555555" stroke="#555555" points="312.06,-883.2 304.06,-886 312.06,-888.8 312.06,-883.2" id="polygon50"/>
+    </g>
+    <!-- Parameters -->
+    <g id="node4" class="node">
+      <title id="title51">Parameters</title>
+      <path fill="#e8f2ff" stroke="#666666" d="M1032.5,-1005C1032.5,-1005 871.5,-1005 871.5,-1005 865.5,-1005 859.5,-999 859.5,-993 859.5,-993 859.5,-965 859.5,-965 859.5,-959 865.5,-953 871.5,-953 871.5,-953 1032.5,-953 1032.5,-953 1038.5,-953 1044.5,-959 1044.5,-965 1044.5,-965 1044.5,-993 1044.5,-993 1044.5,-999 1038.5,-1005 1032.5,-1005" id="path51"/>
+      <text text-anchor="middle" x="952" y="-989.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text51">Parameters</text>
+      <text text-anchor="middle" x="952" y="-975.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text52">Scenario-dependent Values</text>
+      <text text-anchor="middle" x="952" y="-961.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text53" xml:space="preserve"><tspan>(k</tspan><tspan font-size="8.8" dy="2.46">L</tspan><tspan dy="-2.46">a, f</tspan><tspan font-size="8.8" dy="2.46">assim</tspan><tspan dy="-2.46">, k</tspan><tspan font-size="8.8" dy="2.46">dep/hyd</tspan><tspan dy="-2.46">, p</tspan><tspan font-size="8.8" dy="2.46">gas</tspan><tspan dy="-2.46">, …)</tspan></text>
+      </g>
+    <!-- Constants&#45;&gt;Parameters -->
+    <!-- Constants&#45;&gt;MechCap -->
+    <g id="edge11" class="edge">
+      <title id="title61">Constants-&gt;MechCap</title>
+      <text text-anchor="middle" x="702.49927" y="-853.89709" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12px" fill="#111111" id="text62"><tspan sodipodi:role="line" id="tspan145" x="702.49927" y="-853.89709">physical</tspan><tspan sodipodi:role="line" id="tspan146" x="702.49927" y="-838.89709">constants</tspan></text>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M727,-952.93C727,-952.93 727,-611.01 727,-611.01" id="path61"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="729.8,-611.01 727,-603.01 724.2,-611.01 729.8,-611.01" id="polygon61"/>
+    </g>
+    <!-- Parameters&#45;&gt;MechCap -->
+    <g id="edge9" class="edge">
+      <title id="title63">Parameters-&gt;MechCap</title>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M859.46,-970C848.02,-970 840.25,-970 840.25,-970 840.25,-970 840.25,-611.09 840.25,-611.09" id="path63"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="843.05,-611.09 840.25,-603.09 837.45,-611.09 843.05,-611.09" id="polygon63"/>
+      <text text-anchor="middle" x="882.29028" y="-854.0683" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12px" fill="#111111" id="text64"><tspan sodipodi:role="line" x="882.29028" y="-854.0683" id="tspan143">scenario params</tspan><tspan sodipodi:role="line" x="882.29028" y="-839.0683" id="tspan144">(BASE|ASPI)</tspan></text>
+    </g>
+    <!-- Parameters&#45;&gt;Coupling -->
+    <g id="edge10" class="edge">
+      <title id="title65">Parameters-&gt;Coupling</title>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M952,-952.9C952,-918.97 952,-864 952,-864 952,-864 312.04,-864 312.04,-864" id="path65"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="312.04,-861.2 304.04,-864 312.04,-866.8 312.04,-861.2" id="polygon65"/>
+      <text text-anchor="middle" x="798.04907" y="-883.40149" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12px" fill="#111111" id="text66"><tspan sodipodi:role="line" id="tspan137" x="798.04907" y="-883.40149">coupling params</tspan><tspan sodipodi:role="line" id="tspan138" x="798.04907" y="-868.40149">(BASE|ASPI)</tspan></text>
+      <text xml:space="preserve" transform="matrix(0.75035649,0,0,0.75035649,0,-1013.1894)" id="text138" style="fill:#000000;text-orientation:auto;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect138)"/>
+    </g>
+    <!-- MechSize -->
+    <g id="node7" class="node">
+      <title id="title67">MechSize</title>
+      <path fill="#dff7e4" stroke="#666666" d="M714.5,-506C714.5,-506 473.5,-506 473.5,-506 467.5,-506 461.5,-500 461.5,-494 461.5,-494 461.5,-480 461.5,-480 461.5,-474 467.5,-468 473.5,-468 473.5,-468 714.5,-468 714.5,-468 720.5,-468 726.5,-474 726.5,-480 726.5,-480 726.5,-494 726.5,-494 726.5,-500 720.5,-506 714.5,-506" id="path67"/>
+      <text text-anchor="middle" x="594" y="-490.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text68">Infrastructure Sizing [theoretical]</text>
+      <text text-anchor="middle" x="594" y="-476.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text69" xml:space="preserve"><tspan>stream ÷ C</tspan><tspan font-size="8.8" dy="2.46">cap</tspan><tspan dy="-2.46"> → reactor volume · biomass</tspan></text>
+      </g>
+    <!-- MechCap&#45;&gt;MechSize -->
+    <g id="edge18" class="edge">
+      <title id="title71">MechCap-&gt;MechSize</title>
+      <path fill="none" stroke="#555555" d="M668.5,-550.97C668.5,-550.97 668.5,-514.11 668.5,-514.11" id="path71"/>
+      <polygon fill="#555555" stroke="#555555" points="671.3,-514.11 668.5,-506.11 665.7,-514.11 671.3,-514.11" id="polygon71"/>
+    </g>
+    <!-- PathCap&#45;&gt;MechCap -->
+    <!-- PathSize -->
+    <g id="node8" class="node">
+      <title id="title72">PathSize</title>
+      <path fill="#dff7e4" stroke="#666666" d="M417.5,-506C417.5,-506 176.5,-506 176.5,-506 170.5,-506 164.5,-500 164.5,-494 164.5,-494 164.5,-480 164.5,-480 164.5,-474 170.5,-468 176.5,-468 176.5,-468 417.5,-468 417.5,-468 423.5,-468 429.5,-474 429.5,-480 429.5,-480 429.5,-494 429.5,-494 429.5,-500 423.5,-506 417.5,-506" id="path72"/>
+      <text text-anchor="middle" x="297" y="-490.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text72">Infrastructure Sizing [empirical]</text>
+      <text text-anchor="middle" x="297" y="-476.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text73" xml:space="preserve"><tspan>stream ÷ C</tspan><tspan font-size="8.8" dy="2.46">cap</tspan><tspan dy="-2.46"> → reactor volume · biomass</tspan></text>
+      </g>
+    <!-- PathCap&#45;&gt;PathSize -->
+    <g id="edge19" class="edge">
+      <title id="title75">PathCap-&gt;PathSize</title>
+      <path fill="none" stroke="#555555" d="M403.75,-550.97C403.75,-550.97 403.75,-514.11 403.75,-514.11" id="path75"/>
+      <polygon fill="#555555" stroke="#555555" points="406.55,-514.11 403.75,-506.11 400.95,-514.11 406.55,-514.11" id="polygon75"/>
+    </g>
+    <!-- Results -->
+    <g id="node13" class="node">
+      <title id="title76">Results</title>
+      <path fill="#cff2d6" stroke="#666666" d="M409.5,-423C409.5,-423 184.5,-423 184.5,-423 178.5,-423 172.5,-417 172.5,-411 172.5,-411 172.5,-383 172.5,-383 172.5,-377 178.5,-371 184.5,-371 184.5,-371 409.5,-371 409.5,-371 415.5,-371 421.5,-377 421.5,-383 421.5,-383 421.5,-411 421.5,-411 421.5,-417 415.5,-423 409.5,-423" id="path76"/>
+      <text text-anchor="middle" x="297" y="-407.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text76">Sizing Summary</text>
+      <text text-anchor="middle" x="297" y="-393.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text77">Reactor volumes · biomass output</text>
+      <text text-anchor="middle" x="297" y="-379.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text78">BASE vs. ASPI · theoretical vs. empirical</text>
+    </g>
+    <!-- MechSize&#45;&gt;Results -->
+    <g id="edge20" class="edge">
+      <title id="title78">MechSize-&gt;Results</title>
+      <path fill="none" stroke="#555555" d="M594,-467.91C594,-441.49 594,-397 594,-397 594,-397 429.66,-397 429.66,-397" id="path78"/>
+      <polygon fill="#555555" stroke="#555555" points="429.66,-394.2 421.66,-397 429.66,-399.8 429.66,-394.2" id="polygon78"/>
+    </g>
+    <!-- PathSize&#45;&gt;MechSize -->
+    <!-- PathSize&#45;&gt;Results -->
+    <g id="edge21" class="edge">
+      <title id="title79">PathSize-&gt;Results</title>
+      <path fill="none" stroke="#555555" d="M297,-467.91C297,-467.91 297,-431.23 297,-431.23" id="path79"/>
+      <polygon fill="#555555" stroke="#555555" points="299.8,-431.23 297,-423.23 294.2,-431.23 299.8,-431.23" id="polygon79"/>
+    </g>
+    <!-- Pools -->
+    <g id="node10" class="node">
+      <title id="title80">Pools</title>
+      <path fill="#e3e3e3" stroke="#666666" d="M288,-797C288,-797 40,-797 40,-797 34,-797 28,-791 28,-785 28,-785 28,-743 28,-743 28,-737 34,-731 40,-731 40,-731 288,-731 288,-731 294,-731 300,-737 300,-743 300,-743 300,-785 300,-785 300,-791 294,-797 288,-797" id="path80"/>
+      <text text-anchor="middle" x="164" y="-781.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text80">Effective Pooled Streams</text>
+      <text text-anchor="middle" x="164" y="-767.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text81" xml:space="preserve"><tspan>CO₂</tspan><tspan font-size="8.8" dy="2.46">avail</tspan><tspan dy="-2.46"> · CO</tspan><tspan font-size="8.8" dy="2.46">avail</tspan><tspan dy="-2.46"> · CH₄</tspan><tspan font-size="8.8" dy="2.46">avail</tspan><tspan dy="-2.46"> · VFAs</tspan></text>
+      <text text-anchor="middle" x="164" y="-753.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text88">WetOrg · Cellulose · Polyesters · Polyamides</text>
+      <text text-anchor="middle" x="164" y="-739.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text89" xml:space="preserve"><tspan>[kg</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46">/yr | BASE · ASPI]</tspan></text>
+      </g>
+    <!-- Coupling&#45;&gt;Pools -->
+    <g id="edge14" class="edge">
+      <title id="title91">Coupling-&gt;Pools</title>
+      <path fill="none" stroke="#555555" d="M178,-842C178,-842 178,-805.07 178,-805.07" id="path91"/>
+      <polygon fill="#555555" stroke="#555555" points="180.8,-805.07 178,-797.07 175.2,-805.07 180.8,-805.07" id="polygon91"/>
+    </g>
+    <!-- Alloc -->
+    <g id="node11" class="node">
+      <title id="title92">Alloc</title>
+      <path fill="#e3e3e3" stroke="#666666" d="M291.5,-686C291.5,-686 28.5,-686 28.5,-686 22.5,-686 16.5,-680 16.5,-674 16.5,-674 16.5,-660 16.5,-660 16.5,-654 22.5,-648 28.5,-648 28.5,-648 291.5,-648 291.5,-648 297.5,-648 303.5,-654 303.5,-660 303.5,-660 303.5,-674 303.5,-674 303.5,-680 297.5,-686 291.5,-686" id="path92"/>
+      <text text-anchor="middle" x="160" y="-670.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text92">Allocation Matrix</text>
+      <text text-anchor="middle" x="160" y="-656.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text93">Stream → Mechanism fractions (BASE | ASPI)</text>
+    </g>
+    <!-- Pools&#45;&gt;Alloc -->
+    <g id="edge15" class="edge">
+      <title id="title93">Pools-&gt;Alloc</title>
+      <path fill="none" stroke="#555555" d="M164,-730.89C164,-730.89 164,-694.11 164,-694.11" id="path93"/>
+      <polygon fill="#555555" stroke="#555555" points="166.8,-694.11 164,-686.11 161.2,-694.11 166.8,-694.11" id="polygon93"/>
+    </g>
+    <!-- Alloc&#45;&gt;MechSize -->
+    <g id="edge16" class="edge">
+      <title id="title94">Alloc-&gt;MechSize</title>
+      <path fill="none" stroke="#555555" d="M303.67,-667C426.49,-667 583.5,-667 583.5,-667 583.5,-667 583.5,-514.26 583.5,-514.26" id="path94"/>
+      <polygon fill="#555555" stroke="#555555" points="586.3,-514.26 583.5,-506.26 580.7,-514.26 586.3,-514.26" id="polygon94"/>
+      <text text-anchor="middle" x="399.42139" y="-656.89343" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12px" fill="#111111" id="text94">carbon streams</text>
+    </g>
+    <!-- Alloc&#45;&gt;PathSize -->
+    <g id="edge17" class="edge">
+      <title id="title95">Alloc-&gt;PathSize</title>
+      <path fill="none" stroke="#555555" d="M258.75,-647.74C258.75,-647.74 258.75,-514.12 258.75,-514.12" id="path95"/>
+      <polygon fill="#555555" stroke="#555555" points="261.55,-514.12 258.75,-506.12 255.95,-514.12 261.55,-514.12" id="polygon95"/>
+      <text text-anchor="middle" x="281.3678" y="-536.30658" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12px" fill="#111111" id="text95"><tspan sodipodi:role="line" id="tspan130" x="281.3678" y="-536.30658">carbon</tspan><tspan sodipodi:role="line" id="tspan131" x="281.3678" y="-521.30658">streams</tspan></text>
+    </g>
+    <!-- Checks -->
+    <g id="node12" class="node">
+      <title id="title96">Checks</title>
+      <path fill="#effff1" stroke="#666666" d="M202,-596C202,-596 28,-596 28,-596 22,-596 16,-590 16,-584 16,-584 16,-570 16,-570 16,-564 22,-558 28,-558 28,-558 202,-558 202,-558 208,-558 214,-564 214,-570 214,-570 214,-584 214,-584 214,-590 208,-596 202,-596" id="path96"/>
+      <text text-anchor="middle" x="115" y="-580.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text96">Allocation Checks</text>
+      <text text-anchor="middle" x="115" y="-566.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text97">(fraction sums ≤ 1 per stream)</text>
+    </g>
+    <!-- Alloc&#45;&gt;Checks -->
+    <g id="edge12" class="edge">
+      <title id="title97">Alloc-&gt;Checks</title>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M115.25,-647.91C115.25,-647.91 115.25,-604.06 115.25,-604.06" id="path97"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="118.05,-604.06 115.25,-596.06 112.45,-604.06 118.05,-604.06" id="polygon97"/>
+    </g>
+    <!-- Ledger -->
+    <g id="node14" class="node">
+      <title id="title98">Ledger</title>
+      <path fill="#cff2d6" stroke="#666666" d="M449,-326C449,-326 67,-326 67,-326 61,-326 55,-320 55,-314 55,-314 55,-244 55,-244 55,-238 61,-232 67,-232 67,-232 449,-232 449,-232 455,-232 461,-238 461,-244 461,-244 461,-314 461,-314 461,-320 455,-326 449,-326" id="path98"/>
+      <text text-anchor="middle" x="258" y="-310.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="12.32" fill="#111111" id="text98">Global Carbon Ledger</text>
+      <text text-anchor="middle" x="258" y="-296.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text99" xml:space="preserve"><tspan>Throughput — C entering bioprocesses [kg</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46">/yr | %]</tspan></text>
+      <text text-anchor="middle" x="258" y="-282.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text102" xml:space="preserve"><tspan>Biomass — fixed into microbial biomass [kg</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46">/yr | %]</tspan></text>
+      <text text-anchor="middle" x="258" y="-268.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text105" xml:space="preserve"><tspan>CO₂e — metabolic + Sabatier tail (recoverable) [kg</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46">/yr | %]</tspan></text>
+      <text text-anchor="middle" x="258" y="-254.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text108" xml:space="preserve"><tspan>Residual Solids — AD sludge + pyro char (terminal) [kg</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46">/yr | %]</tspan></text>
+      <text text-anchor="middle" x="258" y="-240.8" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.32" fill="#111111" id="text111" xml:space="preserve"><tspan>Remaining Plastics — pyro-incompatible (unconverted) [kg</tspan><tspan font-size="8.8" dy="2.46">C</tspan><tspan dy="-2.46">/yr | %]</tspan></text>
+      </g>
+    <!-- Checks&#45;&gt;Ledger -->
+    <g id="edge23" class="edge">
+      <title id="title113">Checks-&gt;Ledger</title>
+      <text text-anchor="middle" x="80.213348" y="-478.00912" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12px" fill="#111111" id="text114" style="text-align:center;text-anchor:middle"><tspan sodipodi:role="line" id="tspan132" x="80.213348" y="-478.00912">throughput</tspan><tspan sodipodi:role="line" id="tspan133" x="80.213348" y="-463.00912">+ residuals</tspan></text>
+      <path fill="none" stroke="#555555" d="M109.75,-550C109.75,-510.26 109.75,-334.2 109.75,-334.2" id="path113"/>
+      <polygon fill="#555555" stroke="#555555" points="112.55,-334.2 109.75,-326.2 106.95,-334.2 112.55,-334.2" id="polygon113"/>
+    </g>
+    <!-- Results&#45;&gt;Ledger -->
+    <g id="edge22" class="edge">
+      <title id="title115">Results-&gt;Ledger</title>
+      <path fill="none" stroke="#555555" d="M297,-370.81C297,-370.81 297,-334.01 297,-334.01" id="path115"/>
+      <polygon fill="#555555" stroke="#555555" points="299.8,-334.01 297,-326.01 294.2,-334.01 299.8,-334.01" id="polygon115"/>
+    </g>
+    <!-- legend -->
+    <g id="legendnode" class="node" transform="translate(653 -224)">
+      <title id="title116">legend</title>
+      <polygon fill="white" stroke="transparent" points="131.5,-5 131.5,-182 384.5,-182 384.5,-5 131.5,-5" id="polygon116"/>
+      <text text-anchor="start" x="236" y="-165.5" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-weight="bold" font-size="15.00" fill="#111111" id="text116">Legend</text>
+      <text text-anchor="start" x="199" y="-138.9" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.00" fill="#111111" id="text118">carbon / computation flow</text>
+      <text text-anchor="start" x="199" y="-113.9" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.00" fill="#111111" id="text120">parameter / configuration input</text>
+      <polygon fill="#fff0d9" stroke="transparent" points="150,-85.5 150,-98.5 176,-98.5 176,-85.5 150,-85.5" id="polygon120"/>
+      <text text-anchor="start" x="162.88" y="-91.7" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="1.00" fill="#111111" id="text121"/>
+      <polygon fill="none" stroke="#666666" points="137,-84.5 137,-99.5 189,-99.5 189,-84.5 137,-84.5" id="polygon121"/>
+      <text text-anchor="start" x="199" y="-88.9" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.00" fill="#111111" id="text122">scope &amp; assumptions</text>
+      <polygon fill="#dde2e9" stroke="transparent" points="150,-60.5 150,-73.5 176,-73.5 176,-60.5 150,-60.5" id="polygon122"/>
+      <text text-anchor="start" x="162.88" y="-66.7" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="1.00" fill="#111111" id="text123"/>
+      <polygon fill="none" stroke="#666666" points="137,-59.5 137,-74.5 189,-74.5 189,-59.5 137,-59.5" id="polygon123"/>
+      <text text-anchor="start" x="199" y="-63.9" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.00" fill="#111111" id="text124">inputs, constants &amp; parameters</text>
+      <polygon fill="#e3e3e3" stroke="transparent" points="150,-35.5 150,-48.5 176,-48.5 176,-35.5 150,-35.5" id="polygon124"/>
+      <text text-anchor="start" x="162.88" y="-41.7" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="1.00" fill="#111111" id="text125"/>
+      <polygon fill="none" stroke="#666666" points="137,-34.5 137,-49.5 189,-49.5 189,-34.5 137,-34.5" id="polygon125"/>
+      <text text-anchor="start" x="199" y="-38.9" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.00" fill="#111111" id="text126">stream processing &amp; capacity models</text>
+      <polygon fill="#dff7e4" stroke="transparent" points="150,-10.5 150,-23.5 176,-23.5 176,-10.5 150,-10.5" id="polygon126"/>
+      <text text-anchor="start" x="162.88" y="-16.7" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="1.00" fill="#111111" id="text127"/>
+      <polygon fill="none" stroke="#666666" points="137,-9.5 137,-24.5 189,-24.5 189,-9.5 137,-9.5" id="polygon127"/>
+      <text text-anchor="start" x="199" y="-13.9" font-family="Helvetica, TeX Gyre Heros, Nimbus Sans, Liberation Sans, Arial, DejaVu Sans" font-size="12.00" fill="#111111" id="text128">sizing, comparison &amp; ledger</text>
+    </g>
+    <g id="edge19-9" class="edge" transform="matrix(0,-0.98662079,1.12418,0,1409.2556,32.469332)">
+      <title id="title75-4">PathCap-&gt;PathSize</title>
+      <path fill="none" stroke="#555555" d="m 403.75,-550.97 c 0,0 0,36.86 0,36.86" id="path75-8"/>
+      <polygon fill="#555555" stroke="#555555" points="400.95,-514.11 406.55,-514.11 403.75,-506.11 " id="polygon75-8"/>
+    </g>
+    <g id="edge12-4" class="edge" transform="matrix(0,-1.0028718,0.97451189,0,1420.7709,-225.04107)">
+      <title id="title97-5">Alloc-&gt;Checks</title>
+      <path fill="none" stroke="#aaaaaa" stroke-dasharray="5, 2" d="m 115.25,-647.91 c 0,0 0,43.85 0,43.85" id="path97-5"/>
+      <polygon fill="#aaaaaa" stroke="#aaaaaa" points="115.25,-596.06 112.45,-604.06 118.05,-604.06 " id="polygon97-1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+   width="844.89685"
+   height="507.92191"
+   viewBox="0 0 844.89685 507.92191"
+   version="1.1"
+   id="svgRoot"
+   xmlns="http://www.w3.org/2000/svg">
+  <!-- Combined "ISS Carbon Accounting & Up-Cycling" figure. Panel a (top): carbon-accounting / up-cycling flow, from Overview_Figure.svg, rebuilt on an integer grid (16 px interior margins, all elements on cy=96, Terminal Carbon centred beneath the transition chevron); shapes, palette and wording unchanged. Panel b (bottom left): ISS-operational-history / steady-state-throughput card, new, schematic (no dates, units, or counts in the text; the numbered era badges are structural/sequential markers, matching the flow panel's own numbered-pillar convention, not quantities). Flow runs bottom-up: five-era history at the bottom, arrow rising to the throughput node, then an external fan-out connector routes from that node, around the input-box column via the flow panel's left margin, into each of the three input boxes individually, since all three share one x-center and are stacked vertically; a literal one-arrow-per-box fan-out has to route around the column rather than diverge sideways. NOTE: that fan-out connector is described here but is not currently present as geometry in this file. Panel c (bottom right): Scenario x Model sizing matrix from BPSF_matrix.svg, unmodified. Relative panel-a/panel-c arrangement follows Fig0.pdf (OmniGraffle assembly). Element ids are prefixed f_ (flow/Overview_Figure origin) or m_ (matrix/BPSF_matrix origin) to keep provenance traceable. -->
+  <defs
+     id="defsRoot">
+    <linearGradient
+       id="f_chevGrad"
+       x1="403"
+       y1="96"
+       x2="473"
+       y2="96"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#94a8b1"
+         id="f_stop1" />
+      <stop
+         offset="1"
+         stop-color="#7fa05f"
+         id="f_stop2" />
+    </linearGradient>
+    <marker
+       id="f_ah"
+       markerWidth="9"
+       markerHeight="9"
+       refX="6.5"
+       refY="3"
+       orient="auto"
+       markerUnits="userSpaceOnUse">
+      <path
+         d="M 0,0 6.5,3 0,6 Z"
+         fill="#5a5a5a"
+         id="f_path2" />
+    </marker>
+    <linearGradient
+       id="m_hdrGrad"
+       x1="13.311654"
+       y1="94.822929"
+       x2="121.14949"
+       y2="94.822929"
+       gradientTransform="matrix(3.7185462,0,0,0.2689223,378.5625,264.92187)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b8a9d4"
+         id="m_stop1" />
+      <stop
+         offset="0.5"
+         stop-color="#b4b1ab"
+         id="m_stop2" />
+      <stop
+         offset="1"
+         stop-color="#bcab98"
+         id="m_stop3" />
+    </linearGradient>
+    <linearGradient
+       id="m_scenGrad"
+       x1="51.901848"
+       y1="22.162024"
+       x2="51.901848"
+       y2="92.169167"
+       gradientTransform="matrix(0.41424345,0,0,2.4140394,378.5625,264.92187)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e9e9e9"
+         id="m_stop4" />
+      <stop
+         offset="1"
+         stop-color="#c1c1c1"
+         id="m_stop5" />
+    </linearGradient>
+  </defs>
+  <!-- panel a: flow card, from Overview_Figure.svg, rebuilt on an integer grid. -->
+  <!-- LAYOUT GRID: card x=17..844, y=16..239; 16 px interior margin on all four sides. -->
+  <!-- Every element centres on cy=96. Horizontal tiling: 16 | 150 waste | 20 | 196 pillar | 78 chevron | 196 pillar | 65 | 90 node | 16. -->
+  <!-- Vertical: 16 | 128 pillar band | 19 | 44 Terminal node | 16.  (A 20 px margin would force an 11 px pillar/node gap; the card height is fixed at 223 px by panel b at y=253.7.) -->
+  <!-- Type scale (pt grid): 14 pt = 18.6667 px titles; 10 pt = 13.3333 px subtitles + node labels; 9 pt = 12 px pill labels + badge digits. -->
+  <!-- Stroke scale: 1.2 px card + connectors; 1.0 px pillars + node boxes; 0.9 px pill boxes; 0.8 px badges + chevron. -->
+  <!-- Connector rule: every connector is detached at both ends by 3 px nominal (= 2.5 px ink-to-ink, since the shapes it spans carry 0.8-1.0 px strokes). -->
+  <rect
+     x="17.296875"
+     y="17.8125"
+     width="827"
+     height="223"
+     rx="8"
+     fill="#ffffff"
+     stroke="#8a8a8a"
+     stroke-width="1.2"
+     id="f_rect2" />
+  <!-- carbon-bearing waste streams (three accounted categories); centres 68 / 96 / 124, pitch 28 -->
+  <rect
+     x="33.296875"
+     y="58.8125"
+     width="150"
+     height="22"
+     rx="5"
+     fill="#eef2f4"
+     stroke="#6f8a96"
+     stroke-width="0.9"
+     id="f_rect7" />
+  <text
+     x="108.29688"
+     y="73.8125"
+     text-anchor="middle"
+     id="f_text7"
+     style="font-size:12px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans';text-align:center;text-anchor:middle;fill:#1f3540">Metabolic Waste</text>
+  <rect
+     x="33.296875"
+     y="86.8125"
+     width="150"
+     height="22"
+     rx="5"
+     fill="#eef2f4"
+     stroke="#6f8a96"
+     stroke-width="0.9"
+     id="f_rect8" />
+  <text
+     x="108.29688"
+     y="101.8125"
+     text-anchor="middle"
+     id="f_text8"
+     style="font-size:12px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans';text-align:center;text-anchor:middle;fill:#1f3540">Cellulosics</text>
+  <rect
+     x="33.296875"
+     y="114.8125"
+     width="150"
+     height="22"
+     rx="5"
+     fill="#eef2f4"
+     stroke="#6f8a96"
+     stroke-width="0.9"
+     id="f_rect9" />
+  <text
+     x="108.29688"
+     y="129.8125"
+     text-anchor="middle"
+     id="f_text9"
+     style="font-size:12px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans';text-align:center;text-anchor:middle;fill:#1f3540">Plastics</text>
+  <line
+     x1="186.29688"
+     y1="69.8125"
+     x2="200.29688"
+     y2="69.8125"
+     stroke="#5a5a5a"
+     stroke-width="1.2"
+     marker-end="url(#f_ah)"
+     id="f_line10" />
+  <line
+     x1="186.29688"
+     y1="97.8125"
+     x2="200.29688"
+     y2="97.8125"
+     stroke="#5a5a5a"
+     stroke-width="1.2"
+     marker-end="url(#f_ah)"
+     id="f_line11" />
+  <line
+     x1="186.29688"
+     y1="125.8125"
+     x2="200.29688"
+     y2="125.8125"
+     stroke="#5a5a5a"
+     stroke-width="1.2"
+     marker-end="url(#f_ah)"
+     id="f_line12" />
+  <!-- pillar 1: Carbon Accounting -->
+  <rect
+     x="203.29688"
+     y="33.8125"
+     width="196"
+     height="128"
+     rx="6"
+     fill="#e4ebee"
+     stroke="#555555"
+     stroke-width="1"
+     id="f_rect13" />
+  <circle
+     cx="219.29688"
+     cy="47.8125"
+     r="9"
+     fill="#94a8b1"
+     stroke="#555555"
+     stroke-width="0.8"
+     id="f_circle13" />
+  <text
+     x="219.29688"
+     y="51.703499"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     font-weight="bold"
+     fill="#ffffff"
+     id="f_text13"
+     style="font-size:12px;text-align:center;text-anchor:middle">1</text>
+  <text
+     x="301.29688"
+     y="74.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="18.6667px"
+     font-weight="bold"
+     fill="#111111"
+     id="f_text14"
+     style="font-size:18.6667px;text-align:center;text-anchor:middle">Carbon Accounting</text>
+  <text
+     x="301.29688"
+     y="92.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="13.3333px"
+     fill="#333333"
+     id="f_text15"
+     style="font-size:13.3333px;text-align:center;text-anchor:middle"><tspan
+       id="f_tspan1"
+       x="301.29688"
+       y="92.8125"
+       style="font-size:13.3333px">Recoverable-carbon inventory</tspan><tspan
+       id="f_tspan2"
+       x="301.29688"
+       y="109.47913"
+       style="font-size:13.3333px">&amp; mass balance</tspan></text>
+  <rect
+     x="221.29688"
+     y="125.8125"
+     width="160"
+     height="22"
+     rx="5"
+     fill="#ffffff"
+     stroke="#6f8a96"
+     stroke-width="0.9"
+     id="f_rect16" />
+  <text
+     x="301.29688"
+     y="140.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     fill="#1f3540"
+     id="f_text17"
+     style="font-size:12px;text-align:center;text-anchor:middle">Recoverable C Pool (Σ C)</text>
+  <!-- transition: accounting becomes up-cycling (blue to green); 70 px wide, 4 px clearance each side, cx=438, cy=96 -->
+  <polygon
+     points="452,114 403,114 403,78 452,78 452,67 473,96 452,125 "
+     fill="url(#f_chevGrad)"
+     stroke="#555555"
+     stroke-width="0.8"
+     id="f_polygon17"
+     style="fill:url(#f_chevGrad)"
+     transform="translate(0.296875,1.8125)" />
+  <!-- pillar 2: Carbon Up-Cycling -->
+  <rect
+     x="477.29688"
+     y="33.8125"
+     width="196"
+     height="128"
+     rx="6"
+     fill="#e9f0e1"
+     stroke="#555555"
+     stroke-width="1"
+     id="f_rect17" />
+  <circle
+     cx="493.29688"
+     cy="47.8125"
+     r="9"
+     fill="#7fa05f"
+     stroke="#555555"
+     stroke-width="0.8"
+     id="f_circle17" />
+  <text
+     x="493.29688"
+     y="51.703499"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     font-weight="bold"
+     fill="#ffffff"
+     id="f_text18"
+     style="font-size:12px;text-align:center;text-anchor:middle">2</text>
+  <text
+     x="575.29688"
+     y="74.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="18.6667px"
+     font-weight="bold"
+     fill="#111111"
+     id="f_text19"
+     style="font-size:18.6667px;text-align:center;text-anchor:middle">Carbon Up-Cycling</text>
+  <text
+     x="575.29688"
+     y="92.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="13.3333px"
+     font-style="italic"
+     fill="#555555"
+     id="f_text20"
+     style="font-size:13.3333px;text-align:center;text-anchor:middle"><tspan
+       id="f_tspan3"
+       x="575.29688"
+       y="92.8125"
+       style="font-size:13.3333px">predicted across</tspan><tspan
+       id="f_tspan4"
+       x="575.29688"
+       y="109.47913"
+       style="font-size:13.3333px">Scenario × Model</tspan></text>
+  <rect
+     x="495.29688"
+     y="125.8125"
+     width="160"
+     height="22"
+     rx="5"
+     fill="#ffffff"
+     stroke="#6f8a6f"
+     stroke-width="0.9"
+     id="f_rect21" />
+  <text
+     x="575.29688"
+     y="140.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     fill="#2f4a22"
+     id="f_text22"
+     style="font-size:12px;text-align:center;text-anchor:middle">Microbial Assimilation</text>
+  <!-- recovered fraction: shingled (product-agnostic) arrows from up-cycling into the Recoverable Carbon node; centres 88 / 96 / 104 -->
+  <line
+     x1="676.29688"
+     y1="89.8125"
+     x2="735.29688"
+     y2="89.8125"
+     stroke="#5a5a5a"
+     stroke-width="1.2"
+     marker-end="url(#f_ah)"
+     id="f_line24" />
+  <line
+     x1="676.29688"
+     y1="97.8125"
+     x2="735.29688"
+     y2="97.8125"
+     stroke="#5a5a5a"
+     stroke-width="1.2"
+     marker-end="url(#f_ah)"
+     id="f_line23" />
+  <line
+     x1="676.29688"
+     y1="105.8125"
+     x2="735.29688"
+     y2="105.8125"
+     stroke="#5a5a5a"
+     stroke-width="1.2"
+     marker-end="url(#f_ah)"
+     id="f_line22" />
+  <rect
+     x="738.29688"
+     y="75.8125"
+     width="90"
+     height="44"
+     rx="6"
+     fill="#d6e4c4"
+     stroke="#6f8a6f"
+     stroke-width="1"
+     id="f_rect24" />
+  <text
+     x="783.29688"
+     y="93.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="13.3333px"
+     fill="#2f4a22"
+     id="f_text24"
+     style="font-size:13.3333px;text-align:center;text-anchor:middle"><tspan
+       id="f_tspan7"
+       x="783.29688"
+       y="93.8125"
+       style="font-weight:bold;font-size:13.3333px">Recoverable</tspan><tspan
+       id="f_tspan8"
+       x="783.29688"
+       y="110.47913"
+       style="font-weight:bold;font-size:13.3333px">Carbon</tspan></text>
+  <!-- terminal fraction: carbon that bypasses up-cycling; node centred on the transition chevron (cx=438) -->
+  <line
+     x1="438.29688"
+     y1="118.8125"
+     x2="438.29688"
+     y2="177.8125"
+     stroke="#5a5a5a"
+     stroke-width="1.2"
+     marker-end="url(#f_ah)"
+     id="f_line25" />
+  <rect
+     x="393.29688"
+     y="180.8125"
+     width="90"
+     height="44"
+     rx="6"
+     fill="#cccccc"
+     stroke="#8a8a8a"
+     stroke-width="1"
+     id="f_rect25" />
+  <text
+     x="438.29688"
+     y="198.8125"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="13.3333px"
+     fill="#3a3a3a"
+     id="f_text26"
+     style="font-size:13.3333px;text-align:center;text-anchor:middle"><tspan
+       id="f_tspan5"
+       x="438.29688"
+       y="198.8125"
+       style="font-weight:bold;font-size:13.3333px">Terminal</tspan><tspan
+       id="f_tspan6"
+       x="438.29688"
+       y="215.47913"
+       style="font-weight:bold;font-size:13.3333px">Carbon</tspan></text>
+  <!-- panel b: ISS-operational-history / steady-state-throughput card (new) -->
+  <rect
+     id="f_iconCardBorder"
+     x="17.312328"
+     y="255.5304"
+     width="329.83676"
+     height="251.78304"
+     rx="7.9995527"
+     fill="#ffffff"
+     stroke="#8a8a8a"
+     stroke-width="1.21696" />
+  <rect
+     x="93.218079"
+     y="267.50748"
+     width="179.02884"
+     height="30.028835"
+     rx="3.7690282"
+     fill="#eef2f4"
+     stroke="#6f8a96"
+     stroke-width="0.971166"
+     id="f_normBox"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="182.2325"
+     y="286.52188"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="bold"
+     fill="#1f3540"
+     id="f_normLabel"
+     style="font-size:14.6667px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"><tspan
+       style="fill:#000000"
+       id="tspan1">Steady-State Throughput</tspan></text>
+  <line
+     x1="180.4325"
+     y1="322.52188"
+     x2="180.4325"
+     y2="309.52188"
+     stroke="#5a5a5a"
+     stroke-width="0.8"
+     id="line1"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <line
+     x1="184.0325"
+     y1="322.52188"
+     x2="184.0325"
+     y2="309.52188"
+     stroke="#5a5a5a"
+     stroke-width="0.8"
+     id="line2"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <path
+     d="m 179.23249,309.52188 3,-5 3,5"
+     fill="none"
+     stroke="#5a5a5a"
+     stroke-width="1.1"
+     id="path2"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="182.2325"
+     y="335.52188"
+     text-anchor="middle"
+     font-size="12px"
+     font-weight="bold"
+     fill="#1f3540"
+     id="f_eraLabelMain"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"><tspan
+       style="fill:#000000"
+       id="tspan5">Operational Eras</tspan></text>
+  <rect
+     x="37.302498"
+     y="343.52188"
+     width="26.01"
+     height="30"
+     fill="#b2b2d4"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_eraSeg1"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <rect
+     x="63.302505"
+     y="343.52188"
+     width="39.470001"
+     height="30"
+     fill="#cecee3"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_eraSeg2"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <rect
+     x="102.77249"
+     y="343.52188"
+     width="32.779999"
+     height="30"
+     fill="#9b9cc7"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_eraSeg3"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <rect
+     x="135.5625"
+     y="343.52188"
+     width="133.10001"
+     height="30"
+     fill="#6162a6"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_eraSeg4"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <rect
+     x="268.6525"
+     y="343.52188"
+     width="58.5"
+     height="30"
+     fill="#4d4e89"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_eraSeg5"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <!-- era markers: Roman numerals I-V label the five operational eras in left-to-right (chronological) order; structural/sequential markers matching the flow panel's numbered-pillar convention, not quantities. Each numeral is centred in its segment (text-anchor=middle + dominant-baseline=central at the segment's geometric centre); dark ink on the three lighter segments (I-III), white on the two dark segments (IV-V) for contrast. -->
+  <text
+     x="50.307499"
+     y="358.52188"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     font-weight="bold"
+     fill="#1f3540"
+     id="f_eraNum1">I</text>
+  <text
+     x="83.037506"
+     y="358.52188"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     font-weight="bold"
+     fill="#1f3540"
+     id="f_eraNum2">II</text>
+  <text
+     x="119.1625"
+     y="358.52188"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     font-weight="bold"
+     fill="#1f3540"
+     id="f_eraNum3">III</text>
+  <text
+     x="202.1125"
+     y="358.52188"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     font-weight="bold"
+     fill="#ffffff"
+     id="f_eraNum4">IV</text>
+  <text
+     x="297.9025"
+     y="358.52188"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12px"
+     font-weight="bold"
+     fill="#ffffff"
+     id="f_eraNum5">V</text>
+  <line
+     x1="37.302498"
+     y1="376.52188"
+     x2="327.16251"
+     y2="376.52188"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_axisLine"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <line
+     x1="37.302498"
+     y1="376.52188"
+     x2="37.302498"
+     y2="379.52188"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_axisTick0"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="37.302498"
+     y="386.52188"
+     text-anchor="start"
+     font-size="8px"
+     fill="#555555"
+     id="f_axisLabel0"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">0</text>
+  <line
+     x1="95.152496"
+     y1="376.52188"
+     x2="95.152496"
+     y2="379.52188"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_axisTick5"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="95.152496"
+     y="386.52188"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#555555"
+     id="f_axisLabel5"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">5</text>
+  <line
+     x1="152.99249"
+     y1="376.52188"
+     x2="152.99249"
+     y2="379.52188"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_axisTick10"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="152.99249"
+     y="386.52188"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#555555"
+     id="f_axisLabel10"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">10</text>
+  <line
+     x1="210.8425"
+     y1="376.52188"
+     x2="210.8425"
+     y2="379.52188"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_axisTick15"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="210.8425"
+     y="386.52188"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#555555"
+     id="f_axisLabel15"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">15</text>
+  <line
+     x1="268.6925"
+     y1="376.52188"
+     x2="268.6925"
+     y2="379.52188"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_axisTick20"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="268.6925"
+     y="386.52188"
+     text-anchor="middle"
+     font-size="8px"
+     fill="#555555"
+     id="f_axisLabel20"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">20</text>
+  <line
+     x1="326.5325"
+     y1="376.52188"
+     x2="326.5325"
+     y2="379.52188"
+     stroke="#6f8a96"
+     stroke-width="0.8"
+     id="f_axisTick25"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="342.5325"
+     y="386.52188"
+     text-anchor="end"
+     font-size="8px"
+     fill="#555555"
+     id="f_axisLabel25"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">25 (yr)</text>
+  <rect
+     x="37.302498"
+     y="392.42188"
+     width="289.85999"
+     height="9.3999996"
+     fill="#cccccc"
+     stroke="none"
+     id="f_vehBar1"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="182.2325"
+     y="400.12189"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#1f3540"
+     id="f_vehLabel1"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">Progress</text>
+  <rect
+     x="122.31249"
+     y="403.62189"
+     width="73.900002"
+     height="9.3999996"
+     fill="#c7bcdd"
+     stroke="none"
+     id="f_vehBar2"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="159.2625"
+     y="411.32187"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#1f3540"
+     id="f_vehLabel2"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">ATV</text>
+  <rect
+     x="139.74249"
+     y="414.82187"
+     width="123.69"
+     height="9.3999996"
+     fill="#d2c3b3"
+     stroke="none"
+     id="f_vehBar3"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="201.5825"
+     y="422.52188"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#1f3540"
+     id="f_vehLabel3"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">HTV</text>
+  <rect
+     x="326.30249"
+     y="426.02188"
+     width="3"
+     height="9.3999996"
+     fill="#d2c3b3"
+     stroke="none"
+     id="f_vehBar4"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="323.30249"
+     y="433.72186"
+     text-anchor="end"
+     font-size="8.5px"
+     fill="#555555"
+     id="f_vehLabel4"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">HTV-X</text>
+  <rect
+     x="175.3425"
+     y="437.22186"
+     width="151.82001"
+     height="9.3999996"
+     fill="#6f8a96"
+     stroke="none"
+     id="f_vehBar5"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="251.2525"
+     y="444.92188"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#ffffff"
+     id="f_vehLabel5"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">Cargo Dragon</text>
+  <rect
+     x="186.27251"
+     y="448.42188"
+     width="140.89"
+     height="9.3999996"
+     fill="#d6e4c4"
+     stroke="none"
+     id="f_vehBar6"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="256.7225"
+     y="456.12189"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#1f3540"
+     id="f_vehLabel6"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">Cygnus</text>
+  <rect
+     x="37.302498"
+     y="459.62189"
+     width="123.94"
+     height="9.3999996"
+     fill="#94a8b1"
+     stroke="none"
+     id="f_vehBar7"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="99.272499"
+     y="467.32187"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#1f3540"
+     id="f_vehLabel7"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">Shuttle</text>
+  <rect
+     x="37.302498"
+     y="470.82187"
+     width="289.85999"
+     height="9.3999996"
+     fill="#cccccc"
+     stroke="none"
+     id="f_vehBar8"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="182.2325"
+     y="478.52188"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#1f3540"
+     id="f_vehLabel8"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">Soyuz</text>
+  <rect
+     x="263.74249"
+     y="482.02188"
+     width="63.41"
+     height="9.3999996"
+     fill="#6f8a96"
+     stroke="none"
+     id="f_vehBar9"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="295.4425"
+     y="489.72186"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#ffffff"
+     id="f_vehLabel9"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">Crew Dragon</text>
+  <rect
+     x="286.52249"
+     y="493.22186"
+     width="40.639999"
+     height="9.3999996"
+     fill="#e9e4f0"
+     stroke="none"
+     id="f_vehBar10"
+     style="font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'" />
+  <text
+     x="306.8425"
+     y="500.92188"
+     text-anchor="middle"
+     font-size="8.5px"
+     fill="#1f3540"
+     id="f_vehLabel10"
+     style="font-size:9.33333px;font-family:Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'">Starliner</text>
+  <!-- connector: throughput node -> flow panel, fanning out into each of the four input boxes individually (all four share x-center=101 in native flow coordinates, stacked vertically, so the fan-out is routed as a single trunk in the flow panel's left margin, clear of the box column, with a short horizontal branch into each box left edge; an orthogonal jog carries the trunk from the throughput node's exit point over to that margin. Folgepfeil style throughout (double-line shaft, open chevron head) rather than the filled single-line arrow used for material flow elsewhere: this connector denotes that the normalized throughput value informs the four input-box quantities, not a literal transfer of carbon mass into them. -->
+  <!-- panel c: matrix card, from BPSF_matrix.svg, unmodified, positioned per Fig0.pdf arrangement -->
+  <rect
+     x="367.17099"
+     y="255.53036"
+     width="472.78299"
+     height="251.78302"
+     rx="7.9997129"
+     fill="#ffffff"
+     stroke="#8a8a8a"
+     stroke-width="1.21698"
+     id="m_rect5" />
+  <text
+     x="-402.92188"
+     y="389.5625"
+     transform="rotate(-90)"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="16px"
+     font-weight="bold"
+     fill="#111111"
+     id="m_text5"
+     style="font-size:17.3333px">Scenario</text>
+  <rect
+     x="400.5625"
+     y="318.92188"
+     width="28"
+     height="168"
+     fill="url(#m_scenGrad)"
+     stroke="#555555"
+     stroke-width="1"
+     id="m_rect6"
+     style="fill:url(#m_scenGrad)" />
+  <text
+     x="-360.92188"
+     y="414.5625"
+     transform="rotate(-90)"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="13.3333px"
+     font-weight="bold"
+     fill="#111111"
+     id="m_text6"
+     style="font-size:13.3333px">Baseline</text>
+  <text
+     x="-444.92188"
+     y="414.5625"
+     transform="rotate(-90)"
+     text-anchor="middle"
+     dominant-baseline="central"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="13.3333px"
+     font-weight="bold"
+     fill="#111111"
+     id="m_text7"
+     style="font-size:13.3333px">Aspirational</text>
+  <text
+     x="628.5625"
+     y="281.92188"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="17px"
+     font-weight="bold"
+     fill="#111111"
+     id="m_text8"
+     style="font-size:17.3333px">Model</text>
+  <rect
+     x="428.5625"
+     y="290.92188"
+     width="400"
+     height="28"
+     fill="url(#m_hdrGrad)"
+     stroke="#555555"
+     stroke-width="1"
+     id="m_rect8"
+     style="fill:url(#m_hdrGrad)" />
+  <text
+     x="528.5625"
+     y="309.92188"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="14px"
+     font-weight="bold"
+     fill="#111111"
+     id="m_text9"
+     style="font-size:14.6667px">Empirical</text>
+  <text
+     x="728.5625"
+     y="309.92188"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="14px"
+     font-weight="bold"
+     fill="#111111"
+     id="m_text10"
+     style="font-size:14.6667px">Theoretical</text>
+  <rect
+     x="428.5625"
+     y="318.92188"
+     width="200"
+     height="84"
+     fill="#e9e4f0"
+     stroke="#555555"
+     stroke-width="1"
+     id="m_rect10" />
+  <text
+     x="528.5625"
+     y="342.17188"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12.5px"
+     fill="#111111"
+     id="m_text11"
+     style="font-size:13.3333px"><tspan
+       id="m_tspan28"
+       x="528.5625"
+       y="342.17188"
+       style="font-size:13.3333px">Proven chassis, conservative</tspan><tspan
+       id="m_tspan29"
+       x="528.5625"
+       y="358.8385"
+       style="font-size:13.3333px">biological and carbon</tspan><tspan
+       x="528.5625"
+       y="375.50513"
+       id="m_tspan30"
+       style="font-size:13.3333px">throughput assumptions,</tspan><tspan
+       x="528.5625"
+       y="392.17175"
+       id="m_tspan31"
+       style="font-size:13.3333px">most defensible lower bound</tspan></text>
+  <rect
+     x="628.5625"
+     y="318.92188"
+     width="200"
+     height="84"
+     fill="#efe7df"
+     stroke="#555555"
+     stroke-width="1"
+     id="m_rect14" />
+  <text
+     x="728.5625"
+     y="349.92188"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12.5px"
+     fill="#111111"
+     id="m_text15"
+     style="font-size:13.3333px"><tspan
+       id="m_tspan35"
+       x="728.5625"
+       y="349.92188"
+       style="font-size:13.3333px">First-principles maximum,</tspan><tspan
+       x="728.5625"
+       y="366.5885"
+       id="m_tspan37"
+       style="font-size:13.3333px">conservative biological and</tspan><tspan
+       x="728.5625"
+       y="383.25513"
+       id="m_tspan44"
+       style="font-size:13.3333px">carbon throughput assumptions</tspan></text>
+  <rect
+     x="428.5625"
+     y="402.92188"
+     width="200"
+     height="84"
+     fill="#c7bcdd"
+     stroke="#555555"
+     stroke-width="1"
+     id="m_rect17" />
+  <text
+     x="528.5625"
+     y="433.92188"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12.5px"
+     fill="#111111"
+     id="m_text18"
+     style="font-size:13.3333px"><tspan
+       id="m_tspan33"
+       x="528.5625"
+       y="433.92188"
+       style="font-size:13.3333px">Frontier chassis, optimistic</tspan><tspan
+       x="528.5625"
+       y="450.5885"
+       id="m_tspan42"
+       style="font-size:13.3333px">biological and carbon</tspan><tspan
+       x="528.5625"
+       y="467.25513"
+       id="m_tspan34"
+       style="font-size:13.3333px">throughput assumptions</tspan></text>
+  <rect
+     x="628.5625"
+     y="402.92188"
+     width="200"
+     height="84"
+     fill="#d2c3b3"
+     stroke="#555555"
+     stroke-width="1"
+     id="m_rect20" />
+  <text
+     x="728.5625"
+     y="426.17188"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="12.5px"
+     fill="#111111"
+     id="m_text21"
+     style="font-size:13.3333px"><tspan
+       id="m_tspan38"
+       x="728.5625"
+       y="426.17188"
+       style="font-size:13.3333px">First-principles maximum,</tspan><tspan
+       id="m_tspan39"
+       x="728.5625"
+       y="442.8385"
+       style="font-size:13.3333px">optimistic biological and</tspan><tspan
+       x="728.5625"
+       y="459.50513"
+       id="m_tspan40"
+       style="font-size:13.3333px">carbon throughput assumptions,</tspan><tspan
+       x="728.5625"
+       y="476.17175"
+       id="m_tspan41"
+       style="font-size:13.3333px">most aspirational upper bound</tspan></text>
+  <!-- cross-reference badges: identify panel b (era/vehicle history) as the input basis for pillar (1) Carbon Accounting, and panel c (Scenario x Model matrix) as the parameter space for pillar (2) Carbon Up-Cycling. Styled to match the pillar badges exactly (f_circle13/17: r=9, colored fill, white bold text) and positioned at each card's own top-left corner using the same offset convention those badges use relative to their pillar rect (+16,+14); deliberately distinct from both the era-timeline's internal 1-5 badges (grayscale fill, positioned inline within the timeline bar) and the matrix's own quadrant badges (white fill, black stroke, positioned at the grid center), so this numbering reads as a cross-reference rather than a continuation of either. -->
+  <circle
+     cx="33.3125"
+     cy="269.53186"
+     r="9"
+     fill="#94a8b1"
+     stroke="#555555"
+     stroke-width="0.8"
+     id="f_iconCardCrossRefCircle" />
+  <text
+     x="33.3125"
+     y="273.13187"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="11px"
+     font-weight="bold"
+     fill="#ffffff"
+     id="f_iconCardCrossRefNum"
+     style="font-size:12px">1</text>
+  <circle
+     cx="383.17249"
+     cy="269.53186"
+     r="9"
+     fill="#7fa05f"
+     stroke="#555555"
+     stroke-width="0.8"
+     id="m_matrixCardCrossRefCircle" />
+  <text
+     x="383.17249"
+     y="273.13187"
+     text-anchor="middle"
+     font-family="Helvetica, 'TeX Gyre Heros', 'Nimbus Sans', 'Liberation Sans', Arial, 'DejaVu Sans'"
+     font-size="11px"
+     font-weight="bold"
+     fill="#ffffff"
+     id="m_matrixCardCrossRefNum"
+     style="font-size:12px">2</text>
+
+</svg>
