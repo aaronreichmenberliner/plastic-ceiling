@@ -115,8 +115,8 @@ def build() -> None:
     C.apply_rcparams()
     fig = _figure()
     C.OUTPUTS.mkdir(parents=True, exist_ok=True)
-    png_path = C.OUTPUTS / "FigS_plastics_recoverable.png"
-    pdf_path = C.OUTPUTS / "FigS_plastics_recoverable.pdf"
+    png_path = C.OUTPUTS / "FigS1.png"
+    pdf_path = C.OUTPUTS / "FigS1.pdf"
     fig.savefig(png_path, dpi=C.DPI, facecolor="white", bbox_inches="tight", pad_inches=0.08)
     fig.savefig(pdf_path, facecolor="white", bbox_inches="tight", pad_inches=0.08)
     plt.close(fig)

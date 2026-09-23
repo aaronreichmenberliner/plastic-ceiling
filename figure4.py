@@ -189,7 +189,7 @@ def make_figure_4_plastic_fate(colors: dict[str, str], patterns: dict[str, str])
     ax.set_title("Fate of Recalcitrant Plastics", fontsize=F4_TITLE, fontweight="bold", loc="center", pad=8)
 
     fate_of = {dl: fate for _rk, dl, fate in order}
-    legend_order = ["CO$_2$", "Char", "CO", "CH$_4$"]  # 2-col row-major -> col1 CO2/CO, col2 Char/CH4; Unrouted dropped
+    legend_order = ["CO$_2$", "Char", "Unrouted", "CO", "CH$_4$"]  # legend fills column-first: col1 CO2/Char/Unrouted, col2 CO/CH4
     handles = [patches.Patch(facecolor=fate_colors[dl], edgecolor="none", hatch=fate_hatches[dl], label=f"{display_formula(dl)} - {fate_of[dl]}") for dl in legend_order]
     ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, -0.13), ncol=2, frameon=False, fontsize=F4_SMALL)
     return fig

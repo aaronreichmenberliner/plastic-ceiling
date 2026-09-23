@@ -62,6 +62,8 @@ SANKEY_DISPLAY = {
     "Waste CO2 (Vented)": "CO<sub>2</sub> Waste (Vented)",
     "Waste Methane (Vented)": "CH<sub>4</sub> Waste (Vented)",
     "Solid Carbon Waste": "Solid Carbon Waste (Incinerated)",
+    "Biodegradable Plastic": "Bio-deconstructable Plastic",
+    "Non-Biodegradable Plastic": "Recalcitrant Plastic",
 }
 # Terminal nodes sit in the last column; their labels are set to the left of the node so they fall on the
 # diagram rather than in a margin, which lets the Sankey itself use the full width.
@@ -520,38 +522,11 @@ def make_figure_1_stackplot(colors: dict[str, str]) -> plt.Figure:
 
 def build() -> None:
     C.check_inputs([C.NUMBERS, C.COLORS] + ([SANKEY_CACHE] if SANKEY_CACHE else []), 1)
-    colors = C.read_color_key(C.COLORS)
-    # Align every canonical stream node to the shared palette. Vented/exhaled/scrubbed CO2 are all CO2;
-    # wet organics, cellulose and CH4 map to their stream colors; solid carbon takes a terminal-solids grey.
-    for node in ("Waste CO2 (Vented)", "Exhaled CO2", "Scrubbed CO2"):
-        colors[node] = C.SUBSTRATE_COLORS["CO2"]
-    colors["Waste Methane (Vented)"] = C.SUBSTRATE_COLORS["CH4"]
-    colors["Wet Organics"] = C.SUBSTRATE_COLORS["Wet_Organics"]
-    colors["Cellulose"] = C.SUBSTRATE_COLORS["Cellulose"]
-    colors["Solid Carbon Waste"] = "#6E6E6E"
-    # Plastic streams take polymer-family colors; Sabatier is a process node -> neutral grey.
-    colors["Biodegradable Plastic"] = C.SUBSTRATE_COLORS["Polyesters"]
-    colors["Non-Biodegradable Plastic"] = C.SUBSTRATE_COLORS["Other"]
-    colors["Sabatier"] = C.SUBSTRATE_COLORS["CO2"]
-    # Logistics input categories: cool slate ramp graded by lightness. The vivid palette is reserved for the
-    # carbon streams, so the inputs read as off-palette; hue ~215 deg is a lane no stream occupies. Within a
-    # category the doughnut draws carbon at full tone and non-carbon lightened 72% toward white.
-    _slate = {"Food": "#9FB200", "Clothing": "#758C00", "Personal Supplies": "#4E6500", "Packaging": "#2A3800"}
+    # Node names and colours both come from the registry in common.py, so no figure keeps its own copy.
+    colors = C.node_colors()
+    C.check_node_names(SANKEY_NODES, "figure1.SANKEY_NODES")
+    C.check_node_names(C.sankey_node_names(), "numbers.xlsx!'Figure 1A'")
 
-    def _lighten(hex_c: str, frac: float) -> str:
-        r, g, b = (int(hex_c.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
-        return "#{:02X}{:02X}{:02X}".format(*(round(x + (255 - x) * frac) for x in (r, g, b)))
-    _other_colors = {
-        "Food": "#D0D0D0",
-        "Clothing": "#D0D0D0",
-        "Personal Supplies": "#D0D0D0",
-        "Packaging": "#D0D0D0",
-    }
-
-    for _cat, _base in _slate.items():
-        colors[_cat] = _base
-        colors["Carbon " + _cat] = _base
-        colors["Non-Carbon " + _cat] = _other_colors[_cat]
     canvas = C.Canvas(3000, 3170)
     C.place(canvas, make_figure_1_sankey(colors), (80, 40, 2840, 1330))
     #original C.place(canvas, C.render(make_figure_1_stackplot(colors), 0.02), (40, 1420, 1050, 1990))

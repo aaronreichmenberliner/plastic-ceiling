@@ -254,12 +254,12 @@ def build() -> None:
     # grouping by substrate is already legible down the columns.
     labels = [f"{chr(64 + i)}. {route_display(r)}" for i, r in enumerate(C.read_scenario_rows(), start=1)]
     mech_handles = [Patch(facecolor=colors[i], edgecolor="none", label=labels[i]) for i in range(len(labels))]
-    leg_bot = fig.legend(handles=mech_handles, title="Route (Fill Colour Denotes the Substrate)", loc="lower center", bbox_to_anchor=(0.5, MARGIN / fig_h), ncol=LEGEND_NCOL, frameon=True, fontsize=LEG, title_fontsize=LEG_TITLE, handlelength=1.1, handletextpad=0.4, columnspacing=1.4)
+    leg_bot = fig.legend(handles=mech_handles, title="Route (Fill Color Denotes the Substrate)", loc="lower center", bbox_to_anchor=(0.5, MARGIN / fig_h), ncol=LEGEND_NCOL, frameon=True, fontsize=LEG, title_fontsize=LEG_TITLE, handlelength=1.1, handletextpad=0.4, columnspacing=1.4)
     leg_bot.get_title().set_fontweight("bold")
 
     C.OUTPUTS.mkdir(parents=True, exist_ok=True)
-    pdf_path = C.OUTPUTS / "FigS_reactor_volumes.pdf"
-    png_path = C.OUTPUTS / "FigS_reactor_volumes.png"
+    pdf_path = C.OUTPUTS / "FigS3.pdf"
+    png_path = C.OUTPUTS / "FigS3.png"
     fig.savefig(pdf_path, facecolor="white")
     fig.savefig(png_path, dpi=C.DPI, facecolor="white")
     plt.close(fig)

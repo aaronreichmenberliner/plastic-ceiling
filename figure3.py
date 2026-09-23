@@ -93,10 +93,12 @@ def _panel_efficiency(ax: plt.Axes, fig: plt.Figure, colors: dict[str, str]) -> 
     rows = read_scenario_rows()
     clean_common(ax, F3_TICK)
     scenarios = [
-        ("cons_volume_t", "cons_biomass_t", "o", True),
-        ("cons_volume_e", "cons_biomass_e", "o", False),
-        ("aggr_volume_t", "aggr_biomass_t", "^", True),
-        ("aggr_volume_e", "aggr_biomass_e", "^", False),
+        # Filled marks are the empirical estimate and open marks the theoretical, as in panel (a), where the
+        # overlaid bars force that assignment: an outlined bar drawn over a same-colour filled one would vanish.
+        ("cons_volume_t", "cons_biomass_t", "o", False),
+        ("cons_volume_e", "cons_biomass_e", "o", True),
+        ("aggr_volume_t", "aggr_biomass_t", "^", False),
+        ("aggr_volume_e", "aggr_biomass_e", "^", True),
     ]
     eff, pts = [], []
     for idx, r in enumerate(rows, start=1):
@@ -127,10 +129,10 @@ def _panel_efficiency(ax: plt.Axes, fig: plt.Figure, colors: dict[str, str]) -> 
     cbar.set_label(f"Efficiency ({KG_BIOMASS}/L/yr)", fontsize=F3_AXIS)
     cbar.ax.tick_params(labelsize=F3_KEY)
     handles = [
-        Line2D([0], [0], marker="o", linestyle="none", markerfacecolor="#777777", markeredgecolor="#777777", markersize=4, label="Baseline Theoretical"),
-        Line2D([0], [0], marker="o", linestyle="none", markerfacecolor="white", markeredgecolor="#777777", markersize=4, label="Baseline Empirical"),
-        Line2D([0], [0], marker="^", linestyle="none", markerfacecolor="#777777", markeredgecolor="#777777", markersize=4, label="Aspirational Theoretical"),
-        Line2D([0], [0], marker="^", linestyle="none", markerfacecolor="white", markeredgecolor="#777777", markersize=4, label="Aspirational Empirical"),
+        Line2D([0], [0], marker="o", linestyle="none", markerfacecolor="white", markeredgecolor="#777777", markersize=4, label="Baseline Theoretical"),
+        Line2D([0], [0], marker="o", linestyle="none", markerfacecolor="#777777", markeredgecolor="#777777", markersize=4, label="Baseline Empirical"),
+        Line2D([0], [0], marker="^", linestyle="none", markerfacecolor="white", markeredgecolor="#777777", markersize=4, label="Aspirational Theoretical"),
+        Line2D([0], [0], marker="^", linestyle="none", markerfacecolor="#777777", markeredgecolor="#777777", markersize=4, label="Aspirational Empirical"),
     ]
     ax.legend(handles=handles, loc="lower right", frameon=False, fontsize=F3_KEY, handletextpad=0.3, labelspacing=0.3)
 
@@ -161,7 +163,7 @@ def _panel_key(ax: plt.Axes, colors: dict[str, str]) -> None:
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis("off")
-    ax.text(0.0, 0.94, "Substrate Colour", fontsize=F3_KEYTEXT, fontweight="bold", va="top")
+    ax.text(0.0, 0.94, "Substrate Color", fontsize=F3_KEYTEXT, fontweight="bold", va="top")
     x0, y0, dx = 0.0, 0.58, 0.122
     for i, (substrate, label) in enumerate(substrate_legend_items()):
         x = x0 + i * dx

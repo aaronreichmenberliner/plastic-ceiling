@@ -1,0 +1,23 @@
+From,To,Amount (kg_C/person·a)
+Food,Exhaled CO2,107.5
+Food,Food Waste,54.972
+Food,Human Waste,9.808
+Scrubbed CO2,Waste CO2 (Vented),56.975
+Exhaled CO2,Scrubbed CO2,107.5
+Scrubbed CO2,Sabatier,50.525
+Sabatier,Waste Methane (Vented),50.01975
+Food Waste,Wet Organics,54.972
+Human Waste,Wet Organics,9.808
+Cellulose,Solid Carbon Waste,116.0738
+Clothing,Cellulose,33.2442
+Personal Supplies,Cellulose,82.8296
+Biodegradable Plastic,Solid Carbon Waste,57.87
+Packaging,Biodegradable Plastic,21.46
+Packaging,Non-Biodegradable Plastic,261.305
+Clothing,Non-Biodegradable Plastic,11.31
+Non-Biodegradable Plastic,Solid Carbon Waste,309.624
+Clothing,Biodegradable Plastic,28.88
+Personal Supplies,Non-Biodegradable Plastic,37.009
+Personal Supplies,Biodegradable Plastic,7.53
+Sabatier,Waste CO2 (Vented),0.50525
+Wet Organics,Solid Carbon Waste,64.78

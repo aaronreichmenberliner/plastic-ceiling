@@ -252,7 +252,11 @@ def _face(bold: bool) -> tuple:
         from matplotlib import font_manager
 
         path = font_manager.findfont(font_manager.FontProperties(family=FONT, weight="bold" if bold else "normal"))
-        face = TTFont(path, lazy=True)
+        try:
+            face = TTFont(path, lazy=True)
+        except Exception:
+            # macOS ships Helvetica as a .ttc collection; take the first face in it.
+            face = TTFont(path, lazy=True, fontNumber=0)
         _FACE_CACHE[key] = (face.getBestCmap(), face["hmtx"], face["head"].unitsPerEm)
     return _FACE_CACHE[key]
 
@@ -641,6 +645,75 @@ _ROUTE_COLOR_OVERRIDES = {
     ("CO2", "Photoautotroph (aerobic)"): CO2_LIGHT,
     ("CO2", "Lithoautotroph (aerobic)"): CO2_MEDIUM,
 }
+
+# --- node registry -------------------------------------------------------------------------------
+# Every node name that appears in numbers.xlsx, mapped to its colour. This is the single place the
+# names are recorded: the figure scripts draw from node_colors() rather than each keeping its own
+# dict, and check_node_names() turns a rename in the workbook into an error instead of a silent
+# fallback to a default colour.
+TERMINAL_SOLIDS = "#6E6E6E"          # incinerated solid waste; a fate, deliberately outside the stream palette
+PROCESS_NODE = "#9E9E9E"             # unit operations that transform rather than carry carbon
+NONCARBON_GREY = "#D0D0D0"           # the non-carbon remainder of an uplinked category
+
+# Logistics input categories: an olive ramp graded by lightness, so the inputs read as off-palette
+# against the vivid stream colours. Edit here to restyle every figure that draws the categories.
+LOGISTICS_SLATE = {
+    "Food": "#9FB200",
+    "Clothing": "#758C00",
+    "Personal Supplies": "#4E6500",
+    "Packaging": "#2A3800",
+}
+# Metabolic intermediates that are not themselves substrate pools.
+METABOLIC_NODES = {
+    "Food Waste": "#AA4499",
+    "Human Waste": "#857AB8",
+}
+
+
+def node_colors() -> dict[str, str]:
+    """Colour for every node name used in numbers.xlsx: Sankey nodes, plus the doughnut's carbon and
+    non-carbon split of each logistics category. Stream nodes resolve through SUBSTRATE_COLORS, so a
+    change to the substrate palette propagates to every figure."""
+    nodes = {
+        "Exhaled CO2": SUBSTRATE_COLORS["CO2"],
+        "Scrubbed CO2": SUBSTRATE_COLORS["CO2"],
+        "Waste CO2 (Vented)": SUBSTRATE_COLORS["CO2"],
+        "Sabatier": SUBSTRATE_COLORS["CO2"],
+        "Waste Methane (Vented)": SUBSTRATE_COLORS["CH4"],
+        "Wet Organics": SUBSTRATE_COLORS["Wet_Organics"],
+        "Cellulose": SUBSTRATE_COLORS["Cellulose"],
+        "Biodegradable Plastic": SUBSTRATE_COLORS["Polyesters"],
+        "Non-Biodegradable Plastic": SUBSTRATE_COLORS["Other"],
+        "Solid Carbon Waste": TERMINAL_SOLIDS,
+    }
+    nodes.update(METABOLIC_NODES)
+    for category, base in LOGISTICS_SLATE.items():
+        nodes[category] = base
+        nodes["Carbon " + category] = base
+        nodes["Non-Carbon " + category] = NONCARBON_GREY
+    return nodes
+
+
+def sankey_node_names() -> list[str]:
+    """Every distinct node name in the Figure 1A flow table, for validation against the registry."""
+    import openpyxl
+    ws = openpyxl.load_workbook(NUMBERS, data_only=True, read_only=True)["Figure 1A"]
+    names = set()
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        for cell in row[:2]:
+            if cell is not None:
+                names.add(str(cell))
+    return sorted(names)
+
+
+def check_node_names(names, context: str = "numbers.xlsx") -> None:
+    """Fail if a node name is not in the registry. Without this a renamed node silently takes a
+    default colour, which is hard to spot in a rendered figure."""
+    unknown = sorted({str(n) for n in names if n is not None} - set(node_colors()))
+    if unknown:
+        raise KeyError(f"{context}: node name(s) not in common.node_colors(): {unknown}. "
+                       f"Add them to the registry or correct the workbook.")
+
 
 
 def route_color(substrate: str, mechanism: str, default: str = "#96A1B1") -> str:

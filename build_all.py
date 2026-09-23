@@ -16,7 +16,9 @@ import importlib
 import common as C
 
 FIGURES = [0, 1, 2, 3, 4, 5]
-SI_FIGURES = ["figure_si_scenario", "figure_si_reactor_volumes", "figure_plastics_recoverable"]
+# Listed in SI order, so the modules build in the sequence their outputs are numbered:
+# FigS1 plastics, FigS2 scenario aggregate, FigS3 reactor volumes.
+SI_FIGURES = ["figure_plastics_recoverable", "figure_si_scenario", "figure_si_reactor_volumes"]
 
 
 def main() -> int:
@@ -39,7 +41,7 @@ def main() -> int:
     C.write_manifest(sources)
     built = ", ".join(f"Fig{n}" for n in selected)
     if not args.only:
-        built += ", FigS_scenario, FigS_reactor_volumes, FigS_plastics_recoverable"
+        built += ", FigS1, FigS2, FigS3"
     print(f"Build complete: {C.rel(C.OUTPUTS)} contains {built} (PNG + PDF)")
     return 0
 

@@ -1,12 +1,6 @@
-# The Plastic Ceiling: Opportunities and Limitations of Microbial Carbon Recovery in Crewed Spaceflight
+# Publication figure source package
 
-## Abstract
-
-Human spaceflight is entering a phase defined by long-duration missions beyond low Earth orbit (LEO), with sustained operations on the Moon and Mars within mission-architecture scope. The International Space Station (ISS) operates under an open-resource model: all consumables are delivered from Earth, used once, and disposed of through atmospheric re-entry or venting. While water and oxygen cycles are substantially closed, virtually all elemental carbon in food, clothing, and packaging is lost, a paradigm incompatible with the autonomy demands of deep-space operations as well as planetary protection protocols. The scale at stake is non-trivial: we estimate that across the ISS's operational history, logistics resupply has carried approx. 87 metric tons of carbon ($\mathrm{t_C}$) to LEO. Microbial biotechnology has repeatedly been proclaimed as a route to carbon-loop closure, both on Earth and in Space. However, the biological up-cycling potential and carbon-recovery capacity of resupply-derived waste streams has never been quantified. A comprehensive system-level carbon mass balance of ISS operations could also be used to size the required bioprocessing infrastructure and project microbial carbon-recovery capacities per crew and time. Here, we deliver an empirical carbon-accounting record that covers 25 years of stable ISS operations. The accompanying parameterizable and target-product-agnostic Bio-Process Sizing Framework (BPSF) converts user-defined operational inputs into projected carbon recovery capacities and required reactor volumes under the universal physical constraints of aqueous bioprocess design, while also supporting parameterization with chassis-specific empirical data, thereby cross-checking what physics permits against what extant biology delivers.
-
-## Publication figure source package
-
-Self-contained source for manuscript Figures 0-5. One script per figure, plus `common.py` for the machinery they share. Each figure script is standalone: `python figure3.py` reads the workbooks it needs, draws its panels, composites them, and writes `outputs/Fig3.{png,pdf}`.
+Self-contained source for the manuscript figures (Fig0-Fig5) and the supplementary figures (FigS1-FigS3). The package ships without build products: `python build_all.py` generates every figure into `outputs/`. One script per figure, plus `common.py` for the machinery they share. Each figure script is standalone: `python figure3.py` reads the workbooks it needs, draws its panels, composites them, and writes `outputs/Fig3.{png,pdf}`.
 
 ## Build
 
@@ -62,11 +56,13 @@ common.py          paths + CLI overrides, rendering constants, font resolution,
                    manifest writer. Draws nothing.
 figure0.py ...     one per figure: type sizes, panel geometry, panel generators,
 figure5.py         canvas assembly, and a standalone CLI.
-build_all.py       runs all six and writes the manifest
+figure_plastics_recoverable.py, figure_si_scenario.py, figure_si_reactor_volumes.py
+                   the supplementary figures FigS1, FigS2, FigS3
+build_all.py       runs all nine and writes the manifest
 requirements.txt   pinned minimum dependencies
 data/              quantitative inputs (3 workbooks)
 assets/            authored artwork (Fig 0 SVG, Fig 2a SVG, Fig 5 SVG)
-outputs/           build products (git-ignored)
+outputs/           build products (git-ignored; created by the build, not shipped)
 ```
 
 Each `figureN.py` follows the same shape: constants, then `make_figure_Nx` panel generators, then `build()` which checks inputs and places panels on the canvas, then `main()`. Panel geometry (canvas size, panel boxes, label positions) lives entirely in `build()`.

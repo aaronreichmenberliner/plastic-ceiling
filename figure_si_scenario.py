@@ -70,7 +70,7 @@ def _key(ax: plt.Axes, colors: dict[str, str]) -> tuple[plt.matplotlib.legend.Le
         else:
             substrate_handles.append(patches.Patch(facecolor=C.substrate_color(substrate), edgecolor="none"))
     upper = ax.legend(
-        substrate_handles, substrate_labels, title="Substrate Colour", loc="lower center", bbox_to_anchor=(0.5, 0.52),
+        substrate_handles, substrate_labels, title="Substrate Color", loc="lower center", bbox_to_anchor=(0.5, 0.52),
         ncol=len(substrate_labels), frameon=False, fontsize=S_KEY, title_fontsize=S_KEY, handlelength=1.6, handleheight=2.1,
         handletextpad=0.4, columnspacing=0.9, borderpad=0.5, borderaxespad=0.0,  # handleheight exceeds handlelength because matplotlib takes a descent off the handle box; these values render square handler_map={tuple: HandlerTuple(ndivide=None, pad=0.0)},
     )
@@ -121,8 +121,8 @@ def build() -> None:
     fig.canvas.draw()
     frame_key(ax_key, legends)
     C.OUTPUTS.mkdir(parents=True, exist_ok=True)
-    pdf_path = C.OUTPUTS / "FigS_scenario_aggregate.pdf"
-    png_path = C.OUTPUTS / "FigS_scenario_aggregate.png"
+    pdf_path = C.OUTPUTS / "FigS2.pdf"
+    png_path = C.OUTPUTS / "FigS2.png"
     fig.savefig(pdf_path)
     fig.savefig(png_path, dpi=C.DPI)
     plt.close(fig)
