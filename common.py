@@ -59,6 +59,10 @@ def _resolve_font() -> str:
 
 FONT = _resolve_font()
 FONT_CSS = ", ".join(FONT_STACK)   # for <text> elements the compositor writes directly
+# Fallback for characters the body face has no glyph for. CairoSVG selects one family per run rather than
+# falling back per glyph, so a character missing from Helvetica renders as a notdef box however many
+# families FONT_CSS lists after it. _normalise_symbols names a covering family on those characters alone.
+SYMBOL_STACK = ["Arial", "Liberation Sans", "Nimbus Sans", "DejaVu Sans", "Helvetica Neue", "Lucida Grande"]
 HATCH_LW = 0.5        # hatch stroke width (pt); thinner strokes, denser repeats
 KG_PER_TONNE = 1000.0
 T_C = "t$_\\mathrm{C}$"     # tonnes of carbon; C set as a subscript index of t
@@ -248,15 +252,10 @@ def _face(bold: bool) -> tuple:
     """Metrics for the resolved body face, loaded once. The file is located through matplotlib, so it follows FONT and whatever is installed rather than a fixed system path."""
     key = "bold" if bold else "regular"
     if key not in _FACE_CACHE:
-        from fontTools.ttLib import TTFont
         from matplotlib import font_manager
 
         path = font_manager.findfont(font_manager.FontProperties(family=FONT, weight="bold" if bold else "normal"))
-        try:
-            face = TTFont(path, lazy=True)
-        except Exception:
-            # macOS ships Helvetica as a .ttc collection; take the first face in it.
-            face = TTFont(path, lazy=True, fontNumber=0)
+        face = _load_face(path)
         _FACE_CACHE[key] = (face.getBestCmap(), face["hmtx"], face["head"].unitsPerEm)
     return _FACE_CACHE[key]
 
@@ -268,14 +267,54 @@ def _lookup(fragment: str, name: str) -> str | None:
     return (match.group(1) or match.group(2) or "").strip()
 
 
+_SYMBOL_CACHE: dict[str, tuple[str, tuple] | None] = {}
+
+
+def _load_face(path: str):
+    from fontTools.ttLib import TTFont
+
+    try:
+        return TTFont(path, lazy=True)
+    except Exception:
+        # macOS ships Helvetica and several others as .ttc collections; take the first face in one.
+        return TTFont(path, lazy=True, fontNumber=0)
+
+
+def _symbol_face(char: str) -> tuple[str, tuple] | None:
+    """The first family in SYMBOL_STACK that carries `char`, with its metrics. None if nothing installed has it."""
+    if char not in _SYMBOL_CACHE:
+        from matplotlib import font_manager
+
+        resolved = None
+        for family in SYMBOL_STACK:
+            try:
+                path = font_manager.findfont(font_manager.FontProperties(family=family), fallback_to_default=False)
+            except Exception:
+                continue
+            face = _load_face(path)
+            cmap = face.getBestCmap()
+            if ord(char) in cmap:
+                resolved = (family, (cmap, face["hmtx"], face["head"].unitsPerEm))
+                break
+        _SYMBOL_CACHE[char] = resolved
+    return _SYMBOL_CACHE[char]
+
+
 def _advance(text: str, size: float, bold: bool) -> float:
     cmap, hmtx, upm = _face(bold)
-    total = 0
+    total = 0.0
     for char in text:
         glyph = cmap.get(ord(char))
         if glyph is not None:
-            total += hmtx[glyph][0]
-    return total * size / upm
+            total += hmtx[glyph][0] / upm
+            continue
+        # Set from the fallback family by _normalise_symbols, so it is measured there too: a character
+        # measured at zero would shift every centred or right-aligned run that contains one.
+        fallback = _symbol_face(char)
+        if fallback is not None:
+            _, (fb_cmap, fb_hmtx, fb_upm) = fallback
+            total += fb_hmtx[fb_cmap[ord(char)]][0] / fb_upm
+    return total * size
 
 
 def text_advance_mm(text: str, font_pt: float, bold: bool = True) -> float:
@@ -367,9 +406,39 @@ def _normalise_subscripts(svg: str) -> str:
     return re.sub(r"<text\b.*?</text>", rewrite, svg, flags=re.S)
 
 
+_SYMBOL_SPLIT = re.compile(r"[^\x00-\x7f]+")
+
+
+def _normalise_symbols(svg: str) -> str:
+    """Name a covering family on characters the body face has no glyph for, inside <text> elements.
+
+    CairoSVG picks one family per run from font-family rather than falling back per glyph, so a character
+    the resolved face lacks renders as a notdef box no matter what FONT_CSS lists after it. Helvetica has
+    no RIGHTWARDS ARROW, which is how the Figure 5 artwork writes its process steps. Only the characters
+    that are actually missing are re-familied; the surrounding text keeps the body face.
+    """
+    cmap, _, _ = _face(False)
+
+    def rewrite(match: re.Match[str]) -> str:
+        def substitute(run: re.Match[str]) -> str:
+            out = ""
+            for char in run.group(0):
+                if ord(char) in cmap:
+                    out += char
+                    continue
+                fallback = _symbol_face(char)
+                out += f'<tspan font-family="{fallback[0]}">{char}</tspan>' if fallback else char
+            return out
+
+        parts = re.split(r"(<[^>]*>)", match.group(0))
+        return "".join(p if p.startswith("<") else _SYMBOL_SPLIT.sub(substitute, p) for p in parts)
+
+    return _TEXT_ELEMENT.sub(rewrite, svg)
+
+
 def render_svg(path: Path) -> str:
-    """Authored SVG artwork, passed to the compositor with fonts and subscripts normalised. Nothing is rasterized, so <marker> arrowheads and stroke-dasharray survive."""
-    return _normalise_text_anchor(_normalise_subscripts(_normalise_font_family(path.read_text(encoding="utf-8"))))
+    """Authored SVG artwork, passed to the compositor with fonts, subscripts and missing-glyph symbols normalised. Nothing is rasterized, so <marker> arrowheads and stroke-dasharray survive."""
+    return _normalise_text_anchor(_normalise_symbols(_normalise_subscripts(_normalise_font_family(path.read_text(encoding="utf-8")))))
 
 def open_rgba(path: Path) -> Image.Image:
     return Image.open(path).convert("RGBA")

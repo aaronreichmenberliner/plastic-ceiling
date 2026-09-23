@@ -71,8 +71,8 @@ def _key(ax: plt.Axes, colors: dict[str, str]) -> tuple[plt.matplotlib.legend.Le
             substrate_handles.append(patches.Patch(facecolor=C.substrate_color(substrate), edgecolor="none"))
     upper = ax.legend(
         substrate_handles, substrate_labels, title="Substrate Color", loc="lower center", bbox_to_anchor=(0.5, 0.52),
-        ncol=len(substrate_labels), frameon=False, fontsize=S_KEY, title_fontsize=S_KEY, handlelength=1.6, handleheight=2.1,
-        handletextpad=0.4, columnspacing=0.9, borderpad=0.5, borderaxespad=0.0,  # handleheight exceeds handlelength because matplotlib takes a descent off the handle box; these values render square handler_map={tuple: HandlerTuple(ndivide=None, pad=0.0)},
+        ncol=len(substrate_labels), frameon=False, fontsize=S_KEY, title_fontsize=S_KEY, handlelength=1.6, handleheight=2.1,  # handleheight exceeds handlelength because matplotlib takes a descent off the handle box; these values render square
+        handletextpad=0.4, columnspacing=0.9, borderpad=0.5, borderaxespad=0.0, handler_map={tuple: HandlerTuple(ndivide=None, pad=0.0)},
     )
     upper.get_title().set_fontweight("bold")
     ax.add_artist(upper)
